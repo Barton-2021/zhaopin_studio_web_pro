@@ -1,0 +1,93 @@
+:root{
+  /* 轻量、统一的浅色主题 */
+  --bg-1: #f7fbfb; /* 页面主背景 */
+  --bg-2: #f0f7f7; /* 次级渐变 */
+  --card-bg: #ffffff; /* 卡片背景 */
+  --muted: #6b7880; /* 次要文字 */
+  --text: #0f2a2d; /* 正文文字 */
+  --accent: #0ea5a0; /* 主色（青绿） */
+  --muted-ghost: rgba(15,42,45,0.06);
+}
+*{box-sizing:border-box}
+html,body,#__next{height:100%}
+body{
+  margin:0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background: linear-gradient(180deg, var(--bg-1), var(--bg-2));
+  color: var(--text);
+  -webkit-font-smoothing:antialiased;
+  line-height:1.6;
+}
+
+/* 平滑滚动，点击导航锚点时平滑到达 */
+html { scroll-behavior: smooth; }
+
+.site-header{
+  position:fixed;
+  top:0;left:0;right:0;
+  background: var(--card-bg);
+  border-bottom: 1px solid var(--muted-ghost);
+  z-index:50;
+  box-shadow: 0 4px 18px rgba(15,42,45,0.04);
+}
+.site-header .inner{
+  max-width:1100px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;
+}
+.brand a{color:var(--accent);font-weight:700;text-decoration:none;font-size:1.02rem}
+.nav{display:flex;gap:14px;align-items:center}
+.nav-link{color:var(--muted);text-decoration:none;padding:6px 8px;border-radius:6px}
+.nav-link:hover{color:var(--text);background:rgba(15,42,45,0.04)}
+.nav-link.cta{background:linear-gradient(90deg,var(--accent),#6fd8c9);color:#fff;padding:8px 14px;border-radius:10px;font-weight:700}
+
+.container{max-width:1100px;margin:100px auto 48px;padding:0 20px}
+.hero{padding:48px 0 12px;position:relative}
+.hero h1{font-size:2.4rem;margin:0 0 8px;color:var(--text);line-height:1.06}
+.hero p{margin:0;color:var(--muted);font-size:1rem}
+
+/* 装饰性背景形状（淡光圈） */
+.hero::before{
+  display:none; /* 隐藏原先穿透页面的装饰，改用模块顶部的分界线 */
+}
+
+.jobs{margin-top:28px}
+.jobs h2{color:var(--text);font-size:1.1rem;margin-bottom:8px}
+.job-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:12px}
+
+.job-card{background: var(--card-bg);border:1px solid var(--muted-ghost);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(15,42,45,0.06);transition:transform .16s ease, box-shadow .16s ease}
+.job-card:hover{transform:translateY(-6px);box-shadow:0 14px 30px rgba(15,42,45,0.08)}
+.job-head{display:flex;justify-content:space-between;align-items:center}
+.job-head h3{margin:0;font-size:1.05rem;color:var(--text)}
+.summary{color:var(--muted);margin:10px 0;font-size:0.95rem}
+.bullets{color:var(--muted);margin:10px 0 16px;padding-left:18px}
+.apply{display:inline-block;padding:8px 12px;background:transparent;border:1px solid rgba(14,165,160,0.12);color:var(--accent);border-radius:8px;text-decoration:none;font-weight:600}
+
+.apply-form{margin:12px 0 22px;padding:12px;border-radius:8px;background:transparent;border:1px dashed rgba(15,42,45,0.04)}
+.apply-form h4{margin:0 0 8px}
+.apply-form label{display:block;margin:8px 0;color:var(--muted)}
+.apply-form input[type="text"],.apply-form input[type="email"]{width:100%;padding:8px;border-radius:6px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit}
+.apply-form input[type="file"]{color:var(--muted)}
+.apply-form button{margin-top:6px;padding:8px 12px;border-radius:8px;border:none;background:var(--accent);color:#041024;cursor:pointer}
+.status{margin-top:8px;color:var(--muted)}
+
+.culture{margin-top:40px;padding:24px;border-radius:10px;background:var(--card-bg);border:1px solid var(--muted-ghost);box-shadow:0 6px 18px rgba(15,42,45,0.04)}
+
+.contact{margin-top:36px;padding:18px}
+.contact-grid{display:grid;grid-template-columns:1fr 300px;gap:18px;align-items:start}
+.contact-form{padding:18px;border-radius:10px;background:transparent}
+.contact-form p{margin:10px 0;color:var(--muted);font-size:0.98rem}
+.btn-primary{display:none}
+.wechat{padding:12px;text-align:center;color:var(--muted)}
+.apply-cta{display:inline-block;padding:10px 14px;border-radius:10px;border:none;background:var(--accent);color:#fff;text-decoration:none;font-weight:700}
+.wechat img{width:180px;max-width:90%;border-radius:8px;border:1px solid rgba(15,42,45,0.04);box-shadow:0 12px 30px rgba(15,42,45,0.06)}
+
+.footer{max-width:1100px;margin:40px auto;padding:24px;color:var(--muted);text-align:center}
+
+.icp-link{color:var(--muted);margin-left:8px;text-decoration:none;transition:color .18s ease}
+.icp-link:hover{color:#e02424}
+
+@media (max-width:600px){
+  .site-header .inner{padding:10px}
+  .hero h1{font-size:1.6rem}
+  .nav{gap:8px}
+  .contact-grid{grid-template-columns:1fr;}
+}

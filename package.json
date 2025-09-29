@@ -1,0 +1,18 @@
+{
+  "name": "zhaopin_studio_web_pro",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3000",
+    "build": "next build",
+    "start": "next start -p 3000"
+  },
+  "dependencies": {
+    "framer-motion": "^10.12.16",
+    "next": "^13.5.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "formidable": "^3.5.2",
+    "react-icons": "^4.11.0"
+  }
+}
