@@ -2,7 +2,7 @@
  * @Author: Chen_陈工
  * @Date: 2025-09-29 22:42:02
  * @LastEditors: Do not edit
- * @LastEditTime: 2025-09-29 23:01:15
+ * @LastEditTime: 2026-01-07 00:35:21
  * @FilePath: \zhaopin_studio_web_pro\pages\index.js
  */
 import Head from 'next/head'
@@ -94,7 +94,7 @@ export default function Home() {
       <footer className="footer">
         © {new Date().getFullYear()} 广州智尘梦科技工作室 — 招纳贤才
         {' '}
-        <a className="icp-link" href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">粤ICP备2025387170号-2</a>
+        <a className="icp-link" href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">粤ICP备2025387170号</a>
       </footer>
     </>
   )
